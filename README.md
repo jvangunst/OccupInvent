@@ -18,11 +18,18 @@ An analysis of the relative importance of talus characteristics on climate on pi
 
 #### Resources
 
-- What is a pika?(References/MassMntnPika.pdf)
+- ![what is a pika?](/References/MassMntnPika.pdf)
 
-- [https://www.esri.com/about/newsroom/arcuser/mapping-pikas-habitat-to-help-save-them/]
+- (Some press)[https://www.esri.com/about/newsroom/arcuser/mapping-pikas-habitat-to-help-save-them/]
 
-- Northwest Nevada Pika Distribution(References/Jeffress_NWNVPika_2017.pdf)
+- Northwest Nevada Pika Distribution(/References/Jeffress_NWNVPika_2017.pdf)
 
-- Pika Connectivity(References/Castillo-etal_2016_-PikaConnectivity-NatPks.pdf)
+- Pika Connectivity(/References/Castillo-etal_2016_-PikaConnectivity-NatPks.pdf)
+
+##### Tasks
+- [] climate variable correlation matrix
+- [] talus map: 4x moving window
+- [] talus map: lower talus classification threshold
+- [] boosted regression tree analysis
+- [] use monitoring data with mepopulation variable
 
