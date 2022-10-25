@@ -3,11 +3,11 @@ An analysis of the relative importance of talus characteristics on climate on pi
 
 ## Data Used
 
-- A subset of northwestern Nevada talus sites with current or historic pika occupancy.
+- A subset of northwestern Nevada talus sites with current or historic pika occupancy
 
 - Climate
-	PRISM 30-Year Normals(https://prism.oregonstate.edu/normals/): annual precipitation, temperature
-	Derived: Actual EvapoTranspiration, HeatLoad
+	*PRISM 30-Year Normals(https://prism.oregonstate.edu/normals/): annual precipitation, temperature
+	*Derived: Actual EvapoTranspiration, HeatLoad
 
 - Talus Map(https://gblel-dlm.opendata.arcgis.com/maps/DLM::northwest-nevada-talus-map/explore): talus shape, talus size
 
