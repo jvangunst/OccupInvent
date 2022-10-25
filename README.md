@@ -5,11 +5,13 @@ An analysis of the relative importance of talus characteristics on climate on pi
 
 - A subset of northwestern Nevada talus sites with current or historic pika occupancy.
 
-- PRISM 30-Year Norms(https://prism.oregonstate.edu/normals/)
+- PRISM 30-Year Normals(https://prism.oregonstate.edu/normals/)
+=======
 
 - Talus Map(https://gblel-dlm.opendata.arcgis.com/maps/DLM::northwest-nevada-talus-map/explore)
 
 ### Analysis
+
  - randomForest(https://cran.r-project.org/web/packages/randomForest/index.html)
 
 
