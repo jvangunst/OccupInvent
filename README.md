@@ -22,9 +22,9 @@ An analysis of the relative importance of talus characteristics on climate on pi
 
 - (Some press)[https://www.esri.com/about/newsroom/arcuser/mapping-pikas-habitat-to-help-save-them/]
 
-- Northwest Nevada Pika Distribution(/References/Jeffress_NWNVPika_2017.pdf)
+- [Northwest Nevada Pika Distribution](/References/Jeffress_NWNVPika_2017.pdf)
 
-- Pika Connectivity(/References/Castillo-etal_2016_-PikaConnectivity-NatPks.pdf)
+- [Pika Connectivity](/References/Castillo-etal_2016_-PikaConnectivity-NatPks.pdf)
 
 ##### Tasks
 - [] climate variable correlation matrix
