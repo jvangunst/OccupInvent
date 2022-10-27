@@ -28,4 +28,8 @@ c <- as.data.frame(b)
 write.csv(c,"C:\\Users\\jane_\\Documents\\GitHub\\OccupInvent\\Ouputs\\CorrelationMatrix.csv")
 
 
-
+#SubsetData
+Occup <- as.data.frame(OIT %>% select(1, 3, 7:10,12, 15, 19:20))
+summary(Occup)
+OccupGrpd <- as.data.frame(Occup %>% group_by(Occupancy2021) %>% slice_head(prop=.80))
+summary(OccupGrpd)
