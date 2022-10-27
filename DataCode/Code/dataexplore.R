@@ -1,6 +1,8 @@
 #load data and packages
 library(ggplot2)
 library(car)
+library(dplyr)
+library(tidyverse)
 OI <- read.csv("~/GitHub/OccupInvent/DataCode/Data/SiteTalusClim.csv", stringsAsFactors=TRUE)
 View(OI)
 
@@ -19,10 +21,11 @@ pdf(file="~/GitHub/OccupInvent/Graphs/IntroPredVars.pdf"); par(mfrow=c(7,2));
     
     
 #check correlation matrix
-selpred <- as.data.frame(a, col.names = c('ShapeInd', 'JulyMax', 'janMin', 'PrcpAnn', 'HeatLoad', 'TP1990', 'PTalus'))
-b <- cor(selpred)
+OIT <- as_tibble(OI)
+yy <- as.data.frame(OIT %>% select(7:10,12, 15, 19:20))
+b <- cor(yy)
 c <- as.data.frame(b)
-write.csv(c,"~/GitHub/OccupInvent/Outputs/CorMatrix.csv", row.names = FALSE)
+write.csv(c,"C:\\Users\\jane_\\Documents\\GitHub\\OccupInvent\\Ouputs\\CorrelationMatrix.csv")
 
 
 
