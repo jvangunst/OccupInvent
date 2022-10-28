@@ -3,6 +3,7 @@ library(ggplot2)
 library(car)
 library(dplyr)
 library(tidyverse)
+library(caTools)
 OI <- read.csv("~/GitHub/OccupInvent/DataCode/Data/SiteTalusClim.csv", stringsAsFactors=TRUE)
 View(OI)
 
@@ -31,5 +32,16 @@ write.csv(c,"C:\\Users\\jane_\\Documents\\GitHub\\OccupInvent\\Ouputs\\Correlati
 #SubsetData
 Occup <- as.data.frame(OIT %>% select(1, 3, 7:10,12, 15, 19:20))
 summary(Occup)
-OccupGrpd <- as.data.frame(Occup %>% group_by(Occupancy2021) %>% slice_head(prop=.80))
-summary(OccupGrpd)
+split <- sample.split(Occup, SplitRatio=.75)
+train <- subset(Occup, split=="TRUE")
+test <- subset(Occup, split=="FALSE")
+
+
+#RandomForest Analysis
+library(randomForest)
+set.seed(120)
+classifier_RF <- randomForest(x=train, y=train$Occupancy2021, ntree=500)
+classifier_RF
+plot(classifier_RF)
+importance(classifier_RF)
+varImpPlot(classifier_RF)
