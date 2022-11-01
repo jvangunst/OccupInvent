@@ -40,10 +40,23 @@ test <- subset(Occup, split=="FALSE")
 #RandomForest Analysis
 library(randomForest)
 set.seed(120)
-classifier_RF <- randomForest(Occupancy2021 ~ ShapeInd + JulyMax + JanMin + PrcpAnn + AET + HeatLoad + TPI990m + PTalus,
+RF_A <- randomForest(Occupancy2021 ~ JulyMax + JanMin + PrcpAnn + AET + HeatLoad + TPI990m + PTalus,
                               data=train, importance=TRUE, proximity=TRUE)
-classifier_RF
-plot(classifier_RF)
-print(classifier_RF)
-importance(classifier_RF)
-varImpPlot(classifier_RF)
+RF_A
+print(RF_A)
+par(mar=c(1,1,1,1))
+dev.off()
+plot(RF_A)
+
+#Variable importance in class tree
+Imp_RFA <- importance(RF_A)
+write.csv(Imp_RFA,"C:\\Users\\jane_\\Documents\\GitHub\\OccupInvent\\Ouputs\\VariableImp_rFA.csv")
+varImpPlot(RF_A)
+pdf(file="~/GitHub/OccupInvent/Graphs/VariableImportance_rF_A.pdf")
+
+library(datasets)
+library(caret)
+RFpred <- predict(RF_A, train)
+caret::confusionMatrix(RFpred$Occupancy2021, train$Occupancy2021)
+
+
