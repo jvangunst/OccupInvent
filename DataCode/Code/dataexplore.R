@@ -43,6 +43,7 @@ set.seed(120)
 classifier_RF <- randomForest(Occupancy2021 ~ ShapeInd + JulyMax + JanMin + PrcpAnn + AET + HeatLoad + TPI990m + PTalus,
                               data=train, importance=TRUE, proximity=TRUE)
 classifier_RF
+plot(classifier_RF)
 print(classifier_RF)
 importance(classifier_RF)
 varImpPlot(classifier_RF)
