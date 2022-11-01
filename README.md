@@ -27,6 +27,8 @@ An analysis of the relative importance of talus characteristics on climate on pi
 
 - [Pika Connectivity](/References/Castillo-etal_2016_-PikaConnectivity-NatPks.pdf)
 
+-[Project Workflow] (/References/pka_analysis.drawio)
+
 ##### Tasks
 - [] climate variable correlation matrix
 - [] talus map: 4x moving window
