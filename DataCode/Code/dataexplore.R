@@ -56,7 +56,7 @@ pdf(file="~/GitHub/OccupInvent/Graphs/VariableImportance_rF_A.pdf")
 
 library(datasets)
 library(caret)
-RFpred <- predict(RF_A, train)
-caret::confusionMatrix(RFpred$Occupancy2021, train$Occupancy2021)
+RFpred <- predict(RF_A, newdata=test)
+
 
 
