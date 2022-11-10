@@ -43,7 +43,6 @@ set.seed(120)
 RF_A <- randomForest(Occupancy2021 ~ JulyMax + JanMin + PrcpAnn + AET + HeatLoad + TPI990m + PTalus,
                               data=train, importance=TRUE, proximity=TRUE)
 RF_A
-print(RF_A)
 par(mar=c(1,1,1,1))
 dev.off()
 plot(RF_A)
